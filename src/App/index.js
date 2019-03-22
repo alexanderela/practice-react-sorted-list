@@ -14,7 +14,21 @@ class App extends Component {
 
 	addTask = (task) => {
 		const newTask = {...task, id: uuid()}
-		const tasks = [...this.state.tasks, newTask]
+		const unsortedTasks = [...this.state.tasks, newTask]
+		const tasks = unsortedTasks.sort((a, b) => {
+			const task1 = a.task.toLowerCase()
+			const task2 = b.task.toLowerCase()
+
+			if(task1 < task2) {
+				return -1
+			}
+			if(task1 > task2) {
+				return 1
+			}
+
+			return 0
+		})
+
 		this.setState({ tasks })
 	}
 

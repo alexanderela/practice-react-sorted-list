@@ -5,21 +5,30 @@ class NewTaskForm extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			task: ''
+			task: '',
+			error: ''
 		}
 	}
 
 	handleInput = (e) => {
-		const task = e.target.value
+		const task = e.target.value;
 		this.setState({ task })
 	}
 
 	handleSubmit = (e) => {
 		e.preventDefault()
-		this.props.addTask(this.state)
+		const task = this.state.task.trim()
+		if(task.length) {
+			this.props.addTask(this.state)
+			this.setState({ task: '', error: '' })
+		} else {
+			this.setState({ error: 'Please enter a task that is at least 1 letter long.' })
+		}
 	}
 
 	render() {
+		const { task, error } = this.state
+
 		return (
 			<form 
 				className='NewTaskForm'
@@ -28,10 +37,11 @@ class NewTaskForm extends Component {
 				<input 
 					placeholder='Enter new task'
 					name='task'
-					value={this.state.task}
+					value={task}
 					onChange={this.handleInput}
 				/>
 				<button>Submit task</button>
+				<h3 className='form-error'>{error.length ? error : ''}</h3>
 			</form>
 		)
 	}
