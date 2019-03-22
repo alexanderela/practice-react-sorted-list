@@ -1,4 +1,5 @@
 import React from 'react';
+import './TaskContainer.css';
 
 const TaskContainer = ({ tasks }) => {
 	const taskCards = tasks.map(task => {
