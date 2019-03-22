@@ -1,0 +1,11 @@
+.TaskContainer {
+	height: 30rem;
+	width: 30rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+li {
+	width: 5rem;
+}

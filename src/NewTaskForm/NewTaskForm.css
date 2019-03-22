@@ -1,0 +1,16 @@
+.NewTaskForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	width: 30rem;
+	height: 6rem;
+}
+
+input {
+	width: 5rem;
+}
+
+button {
+	width: 5rem;
+}
