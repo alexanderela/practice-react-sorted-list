@@ -1,25 +1,25 @@
 ## Requirements
- *
- * Using the best React practices you know, implement an application based on
- * the below requirements. 
- *
- * 1. A user should be able to input and submit a string of text to the app.
- * 2. The app should maintain a list of strings.
- *   2.1. When a string is submitted, any leading and trailing whitespace should
- *        be removed.
- *   2.2. If the remaining string is at least 1 character long, then it should
- *        be stored in the app's list of strings.
- *   2.3. The element used for text input should be cleared if and only if a
- *        string is stored in the app's list of strings.
- * 3. The app's list of strings should be rendered in alphanumerically sorted order
- *    under the elements used for input and submission.
- * 4. Required `className` prop values for certain elements:
- *   4.1 Root element: "App".
- *   4.2 Element used for text input: "TextInput".
- *   4.3 Element used for text submission: "Submit".
- *   4.4 Parent element to rendered list: "List".
- * 5. The application should be accessible and usable when using only a keyboard.
- * 6. Do not add or change styles - this is a functionality-only exercise.
+
+Using the best React practices you know, implement an application based on
+the below requirements. 
+
+1. A user should be able to input and submit a string of text to the app.
+2. The app should maintain a list of strings.
+  2.1. When a string is submitted, any leading and trailing whitespace should
+       be removed.
+  2.2. If the remaining string is at least 1 character long, then it should
+       be stored in the app's list of strings.
+  2.3. The element used for text input should be cleared if and only if a
+       string is stored in the app's list of strings.
+3. The app's list of strings should be rendered in alphanumerically sorted order
+   under the elements used for input and submission.
+4. Required `className` prop values for certain elements:
+  4.1 Root element: "App".
+  4.2 Element used for text input: "TextInput".
+  4.3 Element used for text submission: "Submit".
+  4.4 Parent element to rendered list: "List".
+5. The application should be accessible and usable when using only a keyboard.
+6. Do not add or change styles - this is a functionality-only exercise.
 
 
 
