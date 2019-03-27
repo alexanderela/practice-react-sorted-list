@@ -19,6 +19,7 @@ class NewTaskForm extends Component {
 		e.preventDefault()
 		const task = this.state.task.trim()
 		if(task.length) {
+			this.setState({ task })
 			this.props.addTask(this.state)
 			this.setState({ task: '', error: '' })
 		} else {
