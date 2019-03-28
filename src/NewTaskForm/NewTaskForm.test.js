@@ -41,6 +41,7 @@ describe('NewTaskForm', () => {
 				},
 				preventDefault: jest.fn()
 			}		
+			wrapper.setState({ task: 'Input text has length'})
 			wrapper.instance().handleSubmit(mockEvent)
 			expect(wrapper.instance().props.addTask).toHaveBeenCalled()
 		})
