@@ -41,13 +41,36 @@ describe('NewTaskForm', () => {
 				},
 				preventDefault: jest.fn()
 			}		
+			wrapper.setState({ task: 'Input text has length'})
 			wrapper.instance().handleSubmit(mockEvent)
 			expect(wrapper.instance().props.addTask).toHaveBeenCalled()
 		})
 		
-		it('should clear input if input has length', () => {})
+		it('should clear input if input has length', () => {
+			mockEvent = {
+				target: {
+					value: 'Input text has length'
+				},
+				preventDefault: jest.fn()
+			}		
+			wrapper.setState({ task: 'Input text has length'})
+			wrapper.instance().handleSubmit(mockEvent)
+			expect(wrapper.state().task).toEqual('')
+			expect(wrapper.state().error).toEqual('')
+		})
 		
-		it('should set error message to state if input has no length', () => {})
+		it('should set error message to state if input has no length', () => {
+			mockEvent = {
+				target: {
+					value: ''
+				},
+				preventDefault: jest.fn()
+			}
+			expected = 'Please enter a task that is at least 1 letter long.'
+			wrapper.setState({ task: '' })
+			wrapper.instance().handleSubmit(mockEvent)
+			expect(wrapper.state().error).toEqual(expected)					
+		})
 	})
 
 })
